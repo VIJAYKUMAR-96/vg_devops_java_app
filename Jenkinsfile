@@ -4,16 +4,19 @@ pipeline{
 
     stages{
 
-        stage('git Checkout'){
-
+        stage('Git Checkout'){
             steps{
-
-                script{
                 gitCheckout(
                     branch: "main",
                     url: "https://github.com/VIJAYKUMAR-96/shared_library.git"
                 )             
-                }
+            }
+        }
+        stage('Unit Test Maven'){
+            steps{
+                script{
+                    mvnTest()
+                }            
             }
         }
     }
