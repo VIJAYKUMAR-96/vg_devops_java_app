@@ -10,7 +10,7 @@ pipeline{
 
                 script{
                 gitCheckout(
-                    branch: "main"
+                    branch: "main",
                     url: "https://github.com/VIJAYKUMAR-96/shared_library.git"
                 )             
                 }
