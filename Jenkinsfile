@@ -3,7 +3,7 @@ pipeline{
 
     stages{
 
-        stage{
+        stage('git Checkout'){
 
             steps{
 
