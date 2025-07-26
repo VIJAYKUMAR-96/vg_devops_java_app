@@ -1,4 +1,5 @@
 @Library('my_shared_library') _
+
 pipeline{
     agent any
 
@@ -10,6 +11,14 @@ pipeline{
                     branch: "main",
                     url: "https://github.com/VIJAYKUMAR-96/vg_devops_java_app.git"
                 )             
+            }
+        }
+
+        stage('Unit Test maven'){
+            steps{
+                script{
+                    sh 'mvn test -x'
+                }           
             }
         }
     }
