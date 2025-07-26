@@ -8,7 +8,7 @@ pipeline{
             steps{
                 gitCheckout(
                     branch: "main",
-                    url: "https://github.com/VIJAYKUMAR-96/shared_library.git"
+                    url: "https://github.com/VIJAYKUMAR-96/vg_devops_java_app.git"
                 )             
             }
         }
