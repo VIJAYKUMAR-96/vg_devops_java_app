@@ -67,10 +67,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version> <!-- Or a newer version compatible with your JDK -->
-                <configuration>
-                    <source>17</source> <!-- Match your JDK version -->
-                    <target>17</target> <!-- Match your JDK version -->
+                <version>3.8.1</version>
+                <configuration    >
+                    <fork>true</fork>
+                    <compilerArgs>
+                        <arg>--add-opens</arg>
+                        <arg>jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
